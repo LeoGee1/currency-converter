@@ -24,21 +24,91 @@ body {
 .flex {
     display: flex;
     flex-direction: column;
+    
 }
+.main {
+    padding: 15px;
+}
+
 .contact {
-    margin: 10px;
-    padding: 5px;
+    /* margin: 5px; */
+    padding: 5px; 
     align-self: end;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    font-size: 13px;
+}
+.cur {
+    font-size: 16px;
+    font-weight: 1000;
+
 }
 .cur::after{
     content: '\a';
     white-space: pre;
     margin: 5px;
+    font-size: 13px;
 }
 .currency {
     text-indent: wrap;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     white-space: normal;
-    padding: 10px;
+    padding: 5px 0px;
+    font-size: 18px;
 }
+.form {
+    padding: 20px 0;
+}
+.form::placeholder {
+    color: red;
+}
+.from {
+    padding: 5px 0px;
+}
+.fromSelect {
+    border: 1px solid #ddd;
+    height: 35px;
+    margin: 5px 0 15px 0;
+}
+.to {
+    padding: 5px 0px;
+}
+.toSelect {
+    border: 1px solid #ddd;
+    height: 35px;
+    margin: 5px 0 30px 0;
+}
+.number {
+    height: 30px;
+}
+.number::placeholder {
+    padding: 5px;
+}
+.Pbutton {
+    display: flex;
+    flex-direction: column;
+}
+.button {
+    width: 80%;
+    height: 35px;
+    align-self: center;
+    font-family: 'PJS';
+    font-weight: 600;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
