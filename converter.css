@@ -1,0 +1,44 @@
+/* reset */
+body, p, a, ul, li, h1, h2, h3 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    /* background: rgb(32, 32, 32); */
+    /* font-family: 'Baloda'; */
+}
+
+/* base styles */
+body {
+    /* color: whitesmoke; */
+    max-width: 768px;
+    margin: auto;
+    font-family: 'PJS';
+}
+/* font styles  */
+@font-face {
+    font-family: 'PJS';
+    src: url('fonts/PlusJakartaSans.ttf');
+}
+/* mobile styles */
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+.contact {
+    margin: 10px;
+    padding: 5px;
+    align-self: end;
+    border: 1px solid red;
+}
+.cur::after{
+    content: '\a';
+    white-space: pre;
+    margin: 5px;
+}
+.currency {
+    text-indent: wrap;
+    border: 1px solid blue;
+    white-space: normal;
+    padding: 10px;
+}
