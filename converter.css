@@ -10,10 +10,10 @@ body, p, a, ul, li, h1, h2, h3 {
 
 /* base styles */
 body {
-    /* color: whitesmoke; */
     max-width: 768px;
     margin: auto;
     font-family: 'PJS';
+    background-color: rgba(221, 221, 221, 0.267);
 }
 /* font styles  */
 @font-face {
@@ -31,54 +31,56 @@ body {
 }
 
 .contact {
-    /* margin: 5px; */
     padding: 5px; 
     align-self: end;
-    /* border: 1px solid red; */
     font-size: 13px;
+    color: #10e95f;
 }
 .cur {
     font-size: 16px;
     font-weight: 1000;
+    display: block;
+    margin-bottom: 5px;
 
 }
-.cur::after{
-    content: '\a';
-    white-space: pre;
-    margin: 5px;
-    font-size: 13px;
-}
+
 .currency {
     text-indent: wrap;
     /* border: 1px solid blue; */
     white-space: normal;
     padding: 5px 0px;
     font-size: 18px;
+    color: rgb(76, 67, 204);
 }
 .form {
     padding: 20px 0;
 }
-.form::placeholder {
-    color: red;
-}
 .from {
     padding: 5px 0px;
+    margin-bottom: 10px;
 }
 .fromSelect {
     border: 1px solid #ddd;
     height: 35px;
-    margin: 5px 0 15px 0;
+    margin: 5px 0 20px 0;
+    background-color: #ddd;
 }
 .to {
     padding: 5px 0px;
+    margin-bottom: 10px;
+
 }
 .toSelect {
     border: 1px solid #ddd;
     height: 35px;
     margin: 5px 0 30px 0;
+    background-color: #ddd;
+
 }
 .number {
     height: 30px;
+    margin-bottom: 25px;
+    background-color: rgba(221, 221, 221, 0.459);
 }
 .number::placeholder {
     padding: 5px;
@@ -89,25 +91,107 @@ body {
 }
 .button {
     width: 80%;
-    height: 35px;
+    height: 45px;
     align-self: center;
     font-family: 'PJS';
     font-weight: 600;
-    
+    border-radius: 7px;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+    background-color: #0dd354;
+    color: whitesmoke;
+}
+.button:hover {
+    background-color: #08bb46;
+}
+.button:active {
+    background-color: blue;
+}
+.result {
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    margin: 5px 0;
+}
+.number2 {
+    width: 96%;
+    height: 30px;
 }
 
+/* tabs and small laptops and above */
+@media screen and (min-width: 480px) {
+    .contact {
+        font-size: 17px;
+    }
+    .cur {
+        font-size: 24px;
+        font-weight: 1000;
+        display: inline;
+        margin-bottom: 5px;
+    }
+    .cur::after{
+        white-space: nowrap;
+        margin: 5px;
+        font-size: 13px;
+    }
+    .currency {
+        text-align: center;
+        padding: 5px 0px;
+        font-size: 24px;
+        color: rgb(76, 67, 204);
+        margin-bottom: 30px;
+    }
+    .form {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .Pfrom {
+        border: 1px solid #ddd;
+        padding: 10px 25px; 
+    }
+    .from {
+        padding: 5px 0px;
+    }
+    .fromSelect {
+        width: 120px;
+        background-color: #ddd;
+        background-color: #ddd;
+    }
+    .Pto {
+        border: 1px solid #ddd;
+        padding: 10px 25px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    .to {
+        padding: 5px 0px;
+    }
+    .toSelect {
+        width: 120px;
+        background-color: #ddd;
+    }
+    .number {
+        height: 30px;
+        margin: 25px 120px;
+    }
+    .button {
+        width: 50%;
+        height: 65px;
+        border-radius: 7px;
+        margin: 25px 0;
+        font-size: 18px;
+    }
+    .result {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+    .number2 {
+        height: 50px;
+    }
+    .number2::placeholder {
+        font-size: 16px;
+        
+    }
+}
 
 
 

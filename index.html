@@ -11,40 +11,49 @@
    <section class="section">
         <main class="main" id="main">
             <header>
-                <nav class="Pcontact flex"> <h3 class="contact">Contact</h3></nav>
+                <nav class="Pcontact flex"><h3 class="contact">Contact</h3>
+                </nav>
                 <div class="Pcurrency">
                     <h2 class="currency"><span class="cur">Currency</span> Converter</h2>
                 </div>
             </header>
-            <div>
-                <form action="" class="form flex">
-                    <label for="countryFrom" class="from">From</label>
-                    <select name="countryFrom" id="countryFrom" class="fromSelect">
-                        <option value="">NGN</option>
-                        <option value="">EUR</option>
-                        <option value="">USD</option>
-                        <option value="">GBP</option>
-                    </select>
+            <form class="form flex">
+                <div class="flex Pfrom">
+                <label for="countryFrom" class="from">From</label>
+                <select name="countryFrom" id="countryFrom" class="fromSelect">
+                    <option value="">NGN</option>
+                    <option value="">EUR</option>
+                    <option value="">USD</option>
+                    <option value="">GBP</option>
+                </select>
+                </div>
 
+                <div class="flex Pto">
                     <label for="countryTo" class="to">To</label>
-                    <select name="countryTo" id="countryTo" class="toSelect">
+                    <select name="countryTo
+                    " id="countryTo" class="toSelect">
                         <option value="">EUR</option>
                         <option value="">NGN</option>
                         <option value="">USD</option>
                         <option value="">GBP</option>
                     </select>
-
-                    <input type="number" class="number" id="number" placeholder="Amount">
-                </form>
+                </div>
+            </form>
+            <div class="Pamount flex">
+                <input type="number" class="number" id="number" placeholder="Amount">
             </div>
             <div class="Pbutton">
                 <button class="button">Convert</button>
-                <div>Result</div>
-                <div>
-                    <h3>Converted Amount</h3>
-                </div>
             </div>
+            <footer class="Pnumber2">
+                <form class="displayForm">
+                    <label for="number2" class="result">Result</label>
+
+                     <input type="number" class="number2" id="number2" placeholder="converted amount">
+                </form>
+            </footer>
         </main>
    </section>
+   <script src="converter.js"></script>
 </body>
 </html>
