@@ -65,6 +65,7 @@ body {
     margin: 5px 0 20px 0;
     background-color: #ddd;
 }
+
 .to {
     padding: 5px 0px;
     margin-bottom: 10px;
@@ -77,10 +78,16 @@ body {
     background-color: #ddd;
 
 }
+.fromSelect option {
+    font-family: 'PJS';
+    background-color: #ddd;
+}
 .number {
     height: 30px;
     margin-bottom: 25px;
     background-color: rgba(221, 221, 221, 0.459);
+    font-size: 16px;
+    font-weight: bold;
 }
 .number::placeholder {
     padding: 5px;
@@ -100,13 +107,43 @@ body {
     margin-bottom: 25px;
     background-color: #0dd354;
     color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .button:hover {
     background-color: #08bb46;
 }
-.button:active {
+.button:focus {
     background-color: blue;
 }
+.animate {
+    position: absolute;
+}
+.arc {
+    border: 5px solid transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: animate 5s linear;
+}
+.one {
+    position: absolute;
+    border: 6px solid transparent;
+    border-bottom-color: #ddd;
+}
+.two {
+    border: 6px solid transparent;
+    border-top-color: #ddd;
+}
+@keyframes animate {
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg)}
+}
+
+
 .result {
     font-size: 13px;
     font-weight: bold;
@@ -116,6 +153,8 @@ body {
 .number2 {
     width: 96%;
     height: 30px;
+    border: 1px solid rgb(177, 175, 175);
+    background-color: white;
 }
 
 /* tabs and small laptops and above */
@@ -149,6 +188,9 @@ body {
         border: 1px solid #ddd;
         padding: 10px 25px; 
     }
+    .Pfrom:hover, .Pto:hover {
+        border: 1px solid black;
+    }
     .from {
         padding: 5px 0px;
     }
@@ -165,6 +207,15 @@ body {
     .to {
         padding: 5px 0px;
     }
+    /* .select::-webkit-scrollbar {
+        
+    }
+    .select::-webkit-scrollbar-track {
+
+    }
+    .select::-webkit-scrollbar-thumb {
+
+    } */
     .toSelect {
         width: 120px;
         background-color: #ddd;
@@ -183,6 +234,14 @@ body {
     .result {
         font-size: 16px;
         margin: 8px 0;
+    }
+    .number {
+        height: 45px;
+        margin-bottom: 25px;
+        background-color: rgba(221, 221, 221, 0.459);
+    }
+    .number::placeholder {
+        font-size: 16px;
     }
     .number2 {
         height: 50px;

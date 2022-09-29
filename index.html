@@ -19,23 +19,23 @@
             </header>
             <form class="form flex">
                 <div class="flex Pfrom">
-                <label for="countryFrom" class="from">From</label>
-                <select name="countryFrom" id="countryFrom" class="fromSelect">
-                    <option value="">NGN</option>
-                    <option value="">EUR</option>
-                    <option value="">USD</option>
-                    <option value="">GBP</option>
-                </select>
+                    <label for="countryFrom" class="from">From</label>
+                    <select name="countryFrom" id="countryFrom" class="fromSelect select">
+                        <option value="" class="optionFrom">NGN</option>
+                        <option value="" class="optionFrom">EUR</option>
+                        <option value="" class="optionFrom">USD</option>
+                        <option value="" class="optionFrom">GBP</option>
+                    </select>
                 </div>
 
                 <div class="flex Pto">
                     <label for="countryTo" class="to">To</label>
                     <select name="countryTo
-                    " id="countryTo" class="toSelect">
-                        <option value="">EUR</option>
-                        <option value="">NGN</option>
-                        <option value="">USD</option>
-                        <option value="">GBP</option>
+                    " id="countryTo" class="toSelect select">
+                        <option value="" class="optionTo">EUR</option>
+                        <option value="" class="optionTo">NGN</option>
+                        <option value="" class="optionTo">USD</option>
+                        <option value="" class="optionTo">GBP</option>
                     </select>
                 </div>
             </form>
@@ -43,17 +43,22 @@
                 <input type="number" class="number" id="number" placeholder="Amount">
             </div>
             <div class="Pbutton">
-                <button class="button">Convert</button>
+                <button class="button">Convert
+                    <div class="animate">
+                        <div class="arc one"></div>
+                        <div class="arc two"></div>
+                    </div>
+                </button>
             </div>
             <footer class="Pnumber2">
                 <form class="displayForm">
-                    <label for="number2" class="result">Result</label>
-
-                     <input type="number" class="number2" id="number2" placeholder="converted amount">
+                    <div class="result">Result</div>
+                     <div class="number2" placeholder="converted amount">
                 </form>
             </footer>
         </main>
    </section>
+   <script src="currency-list.js"></script>
    <script src="converter.js"></script>
 </body>
 </html>
