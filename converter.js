@@ -2,7 +2,7 @@ const dropList = document.querySelectorAll('.select'),
 fromCurrency = document.querySelector('.Pfrom select'),
 toCurrency = document.querySelector('.Pto select'),
 getButton = document.querySelector('#button'),
-display = document.querySelector('.number');
+screen = document.querySelector('.number');
 
 
 
@@ -26,13 +26,17 @@ for (let i = 0; i < dropList.length; i++) {
   }
     
 }
+//normal way
 getButton.addEventListener('click', e => {
     e.preventDefault();
-    showLoadAnimation()
+    showLoadAnimation();
+    // getExchangeRate();
+
 });
 
+const amount =  document.querySelector('.amount');
+
 const getExchangeRate = () => {
-    const amount =  document.querySelector('.amount');
     let amountVal = amount.value;
     if (amountVal === '' || amountVal === '0') {
         amount.value = '1';
@@ -40,24 +44,43 @@ const getExchangeRate = () => {
     }
     let url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${fromCurrency.value.toLowerCase()}.json`;
 
-        fetch(url).then(response => response.json()).then(result => {
-            let exchangeRate = result[fromCurrency.value.toLowerCase()][toCurrency.value.toLowerCase()];
-            let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
-            display.innerText = totalExchangeRate;
-           
-        })  
+    fetch(url).then(response => response.json()).then(result => {
+        let exchangeRate = result[fromCurrency.value.toLowerCase()][toCurrency.value.toLowerCase()];
+        let totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
+        screen.innerText = totalExchangeRate;
+    });
 }
 const showLoadAnimation = () => {
-    if (display.innerText === '') {
+    if (screen.innerText === '') {
         getButton.firstElementChild.style.display = 'none';
         getButton.firstElementChild.nextElementSibling.style.display = 'block';
+        
+         setTimeout(() => {
+         getButton.firstElementChild.style.display = 'block';
+         getButton.firstElementChild.nextElementSibling.style.display = 'none';
+
+         getExchangeRate();
+         }, 1000);
     }
-    setTimeout(() =>{
-        getButton.firstElementChild.style.display = 'block';
-        getButton.firstElementChild.nextElementSibling.style.display = 'none';
-        getExchangeRate();
-    }, 1000)
 }
+
+amount.addEventListener('keyup', () =>{
+    clear()
+})
+const clear = (e) => {
+    screen.innerText = ' '
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
