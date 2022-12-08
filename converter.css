@@ -34,6 +34,7 @@ body {
     align-self: end;
     font-size: 13px;
     color: #10e95f;
+    cursor: pointer;
 }
 .cur {
     font-size: 16px;
@@ -51,6 +52,7 @@ body {
     font-size: 18px;
     color: rgb(76, 67, 204);
     text-shadow: 0 2px 3px rgb(0 0 0 / 20%);
+    cursor: default;
 }
 .form {
     padding: 20px 0;

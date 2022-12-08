@@ -63,15 +63,20 @@ const showLoadAnimation = () => {
          }, 1000);
     }
 }
-
 amount.addEventListener('keyup', () =>{
-    clear()
-})
+    clear();
+});
+
 const clear = (e) => {
     screen.innerText = ' '
 }
 
-
+fromCurrency.addEventListener('click', e => {
+    clear();
+});
+toCurrency.addEventListener('click', e => {
+    clear();
+});
 
 
 
